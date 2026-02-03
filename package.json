@@ -1,0 +1,12 @@
+{
+  "name": "wallpaper-generator",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "node server/index.js"
+  },
+  "dependencies": {
+    "canvas": "^2.11.2",
+    "express": "^4.19.2"
+  }
+}

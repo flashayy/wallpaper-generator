@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="sk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Wallpaper Generator</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="wrap">
+      <h1>Wallpaper Generator 🎨</h1>
+
+      <section class="card">
+        <div class="row">
+          <label>
+            Rozlíšenie
+            <select id="resolution">
+              <option value="1920x1080">1920×1080 (FHD)</option>
+              <option value="2560x1440">2560×1440 (QHD)</option>
+              <option value="3840x2160" selected>3840×2160 (4K)</option>
+              <option value="1440x3120">1440×3120 (Phone)</option>
+            </select>
+          </label>
+
+          <label>
+            Seed (rovnaký seed = rovnaký výstup)
+            <input id="seed" type="number" placeholder="napr. 12345" />
+          </label>
+        </div>
+
+        <div class="row">
+          <label>
+            Farba 1
+            <input id="c1" type="color" value="#0B132B" />
+          </label>
+          <label>
+            Farba 2
+            <input id="c2" type="color" value="#1C2541" />
+          </label>
+          <label>
+            Farba 3
+            <input id="c3" type="color" value="#3A506B" />
+          </label>
+        </div>
+
+        <div class="row">
+          <label>
+            Grain
+            <input id="grain" type="range" min="0" max="0.25" step="0.01" value="0.08" />
+            <span id="grainVal"></span>
+          </label>
+
+          <label>
+            Vignette
+            <input id="vignette" type="range" min="0" max="0.5" step="0.01" value="0.22" />
+            <span id="vignetteVal"></span>
+          </label>
+        </div>
+
+        <div class="row actions">
+          <button id="randomSeed">Random seed 🎲</button>
+          <button id="generate" class="primary">Generate & Download ⬇️</button>
+        </div>
+
+        <p class="hint">
+          Tip: Ak dáš seed prázdny, použije sa aktuálny čas. Ak chceš „preset look“, drž sa 3 farieb + grain 0.06–0.12.
+        </p>
+      </section>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>
